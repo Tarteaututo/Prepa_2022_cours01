@@ -20,6 +20,19 @@ public class WorldLimits : MonoBehaviour
         {
             position.z = transform.position.z + zLimit;
         }
+        else if (position.z < transform.position.z - zLimit)
+        {
+            position.z = transform.position.z - zLimit;
+        }
+
+        if (position.x > transform.position.x + xLimit)
+        {
+            position.x = transform.position.x + xLimit;
+        }
+        else if (position.x < transform.position.x - xLimit)
+        {
+            position.x = transform.position.x - xLimit;
+        }
 
         return position;
     }
