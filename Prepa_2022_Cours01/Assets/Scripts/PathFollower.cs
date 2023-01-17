@@ -10,11 +10,15 @@ public class PathFollower : MonoBehaviour
     [SerializeField]
     private float moveSpeed = 1;
 
-    [SerializeField]
     private Path path;
 
 
     int currentWaypointIndex = 0;
+
+    public void SetPath(Path path)
+    {
+        this.path = path;
+    }
 
     private void Update()
     {
@@ -22,7 +26,7 @@ public class PathFollower : MonoBehaviour
         Vector3 movementDirection = (destination - transform.position).normalized;
         transform.position = transform.position + movementDirection * moveSpeed * Time.deltaTime;
 
-        float distanceToDestination = Vector3.Distance(transform.position, destination);
+        //float distanceToDestination = Vector3.Distance(transform.position, destination);
         //Debug.Log("distanceToDestination : " + distanceToDestination);
 
         if (Vector3.Distance(transform.position, destination) < distanceThreshold)

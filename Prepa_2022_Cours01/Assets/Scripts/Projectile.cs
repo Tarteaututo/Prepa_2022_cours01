@@ -10,7 +10,14 @@ public class Projectile : MonoBehaviour
 
     [SerializeField]
     private float moveSpeed = 1;
+    
+    [SerializeField]
+    private float lifeTime = 6;
 
+    private void Start()
+    {
+        Destroy(gameObject, lifeTime);
+    }
     private void Update()
     {
         transform.position = transform.position + transform.forward * moveSpeed * Time.deltaTime;
