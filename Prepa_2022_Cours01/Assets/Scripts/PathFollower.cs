@@ -23,7 +23,7 @@ public class PathFollower : MonoBehaviour
         transform.position = transform.position + movementDirection * moveSpeed * Time.deltaTime;
 
         float distanceToDestination = Vector3.Distance(transform.position, destination);
-        Debug.Log("distanceToDestination : " + distanceToDestination);
+        //Debug.Log("distanceToDestination : " + distanceToDestination);
 
         if (Vector3.Distance(transform.position, destination) < distanceThreshold)
         {
