@@ -29,6 +29,9 @@ public class EntitySpawner : MonoBehaviour
             CreateEntity();
             _currentWaitingTime = 0;
         }
+
+        //GameManager.Instance.TestGameManager();
+
     }
 
     void CreateEntity()

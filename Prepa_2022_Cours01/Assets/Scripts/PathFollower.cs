@@ -2,8 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+public enum EntityType
+{
+    Default = 0,
+    Heavy, // 1
+    Speedy // 2
+}
+
 public class PathFollower : MonoBehaviour
 {
+    [SerializeField]
+    private EntityType entityType = EntityType.Default;
+
     [SerializeField]
     private float distanceThreshold = 0.5f;
 
